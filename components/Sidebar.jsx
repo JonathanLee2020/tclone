@@ -14,10 +14,10 @@ import Image from 'next/image';
 
 function SideBarLink({text, Icon}) {
     return (
-        <li className="flex items-center text-xl">
+        <li className="flex items-center text-xl py-3">
             <Icon className = "h-7"/>
             
-            <span className="xl:inline space-x-3">{text} </span>
+            <span className=" hidden xl:inline space-x-3">{text} </span>
         </li>
     )
 }
@@ -26,7 +26,7 @@ function SideBarLink({text, Icon}) {
 export default function Sidebar () {
     return (
         <div className="hidden sm:flex flex-col fixed">
-            <div>
+            <div className="py-3">
                 <Image src={"/assets/twitter-logo.png"} width={34} height={34} alt="hello"/>
             </div>
             <nav>
