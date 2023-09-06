@@ -9,6 +9,9 @@ import {
     DotsCircleHorizontalIcon
 } from "@heroicons/react/outline"
 
+import Image from 'next/image';
+
+
 function SideBarLink({text, Icon}) {
     return (
         <li className="flex items-center text-xl">
@@ -24,7 +27,7 @@ export default function Sidebar () {
     return (
         <div className="hidden sm:flex flex-col fixed">
             <div>
-                <Image src={} width={34} height={34}></Image>
+                <Image src={"/assets/twitter-logo.png"} width={34} height={34} alt="hello"/>
             </div>
             <nav>
                 <SideBarLink 
