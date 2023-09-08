@@ -1,3 +1,5 @@
+import TweetInput from "./TweetInput"
+
 export default function PostFeed () {
     return (
         <div className="sm:ml-20 xl:ml-96 max-w-2xl flex-grow border-gray-700 border-x">
@@ -6,7 +8,7 @@ export default function PostFeed () {
             ">
                 Home
             </div>
-            Feed
+            <TweetInput/>
         </div>
     )
 }
