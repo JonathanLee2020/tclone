@@ -58,7 +58,7 @@ export default function Sidebar () {
                 Icon={DotsCircleHorizontalIcon}
                 ></SideBarLink>
 
-                <button className=" xl:inline bg-[#1d9bf0] rounded-full h-[52px] w-[200px]">
+                <button className="hidden xl:inline bg-[#1d9bf0] rounded-full h-[52px] w-[200px] text-lg font-bold mt-2">
                     Tweet
                 </button>
             
