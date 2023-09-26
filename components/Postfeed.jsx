@@ -1,4 +1,5 @@
 import TweetInput from "./TweetInput"
+import Tweet from "./Tweet"
 
 export default function PostFeed () {
     return (
@@ -9,6 +10,7 @@ export default function PostFeed () {
                 Home
             </div>
             <TweetInput/>
+            <Tweet/>
         </div>
     )
 }
