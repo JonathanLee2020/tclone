@@ -5,7 +5,8 @@ export default function () {
         <div className="flex space-x-3 p-3 border-b border-gray-700">
             <img 
             className="w-11 h-11 rounded-full object-cover"
-            src="/assets/kylie.png" alt="" />
+            src="/assets/default.png
+            " alt="" />
             <div className="w-full">
                 <textarea 
                 placeholder="what's on your mind?"

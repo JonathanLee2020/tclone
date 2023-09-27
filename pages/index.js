@@ -19,8 +19,8 @@ export default function Home() {
     
 
     >
-    <Sidebar/>
-    <PostFeed/>
+    {/* <Sidebar/> */}
+    {/* <PostFeed/> */}
     <Trending/>
 
 
