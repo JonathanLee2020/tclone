@@ -1,9 +1,9 @@
 import { closeSignupModal, openSignupModal } from "@/redux/modalSlice";
 import Modal from "@mui/material/Modal"
 import { useDispatch, useSelector } from "react-redux";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { create } from "@mui/material/styles/createTransitions";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { auth } from "@/firebase";
 
 export default function SignUpModal() {
@@ -21,6 +21,18 @@ export default function SignUpModal() {
             password
         )
     }
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            if (!currentUser) return;
+            
+
+            
+
+        })
+
+        return unsubscribe
+    }, [])
     return (
         <>
             <button
