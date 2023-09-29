@@ -1,3 +1,4 @@
+import LoginModal from "./modal/LoginModal"
 import SignUpModal from "./modal/SignUpModal"
 
 export default function BottomBaner() {
@@ -9,15 +10,18 @@ export default function BottomBaner() {
             </div>
 
             <div className="space-x-3">
-                <button 
+                {/* <button 
                 className="bg-transparent border border-white text-white
                 w-[160px] rounded-full h-[40px] hover:bg-[#cbd2d7]
                 "
-                >Log In</button>
+                >Log In</button> */}
                 {/* <button
                 className="bg-white text-black border 
                 w-[160px] rounded-full h-[40px] hover:bg-[#cbd2d7]"
                 >Sign Up</button> */}
+
+                <LoginModal/>
+                gaming
                 <SignUpModal/>
             </div>
         </div>
