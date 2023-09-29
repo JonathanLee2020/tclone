@@ -19,7 +19,7 @@ export default function Tweet () {
 
 export function TweetHeader() {
     return (
-        <div className="flex space-x-3 p-3  border-gray-700">
+        <div className="flex space-x-3 p-3 border-gray-700">
             <img src="assets/kiki.jpeg" alt="" 
             className="w-11 h-11 rounded-full object-cover"
             />

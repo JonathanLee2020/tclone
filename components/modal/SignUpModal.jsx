@@ -1,10 +1,26 @@
 import { closeSignupModal, openSignupModal } from "@/redux/modalSlice";
 import Modal from "@mui/material/Modal"
 import { useDispatch, useSelector } from "react-redux";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { create } from "@mui/material/styles/createTransitions";
+import { useState } from "react";
+import { auth } from "@/firebase";
+
 export default function SignUpModal() {
 
     const isOpen = useSelector(state => state.modals.signupModalOpen)
     const dispatch = useDispatch()
+
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    async function handleSignUp() {
+        const userCredentials = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password
+        )
+    }
     return (
         <>
             <button
@@ -37,13 +53,20 @@ export default function SignUpModal() {
                         <input 
                         placeholder="Email"
                         className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
-                        type={"email"} />
+                        type={"email"} 
+                        onChange={event => setEmail(event.target.value)}
+                        />
+
                         <input 
                         placeholder="Password"
                         className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
-                        type={"password"} />
+                        type={"password"} 
+                        onChange={event => setPassword(event.target.value)}
+                        />
 
-                        <button className="bg-white text-black w-full font-bold text-lg p-2 mt-8 rounded-md">
+                        <button className="bg-white text-black w-full font-bold text-lg p-2 mt-8 rounded-md"
+                        onClick={handleSignUp}
+                        >
                             Create Account
                         </button>
                     </div>
