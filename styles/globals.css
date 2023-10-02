@@ -11,3 +11,7 @@
 .iconAnimation {
   @apply hover:bg-opacity-10 hover:bg-[#1d9bf0] rounded-full cursor-pointer w-9 h-9 flex items-center justify-center
 }
+
+body {
+  background-color: black;
+}

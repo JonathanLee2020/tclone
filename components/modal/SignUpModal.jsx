@@ -1,25 +1,43 @@
 import { closeSignupModal, openSignupModal } from "@/redux/modalSlice";
 import Modal from "@mui/material/Modal"
 import { useDispatch, useSelector } from "react-redux";
-import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "@/firebase";
 import { setUser } from "@/redux/userSlice";
+import { useRouter } from "next/router";
 
 export default function SignUpModal() {
+
 
     const isOpen = useSelector(state => state.modals.signupModalOpen)
     const dispatch = useDispatch()
 
     const [email, setEmail] = useState("")
+    const [name, setName] = useState("")
     const [password, setPassword] = useState("")
+
+    const router = useRouter();
 
     async function handleSignUp() {
         const userCredentials = await createUserWithEmailAndPassword(
             auth,
             email,
             password
-        )
+        );
+
+        await updateProfile(auth.currentUser, {
+            // displayName: name,
+            displayName: name,
+            photoUrl: `./assets/profilePictures/pfp2.png`
+            // photoUrl: 
+        })
+
+        router.reload()
+    }
+
+    async function handleGuestSignIn(email, password) {
+        await signInWithEmailAndPassword(auth, "guest493386@gmail.com", "arceusdeoxys");
     }
 
     useEffect(() => {
@@ -27,10 +45,10 @@ export default function SignUpModal() {
             if (!currentUser) return;
             dispatch(setUser({
                 username: currentUser.email.split("@")[0],
-                name: null,
+                name: currentUser.displayName,
                 email: currentUser.email,
                 uid: currentUser.uid,
-                photoUrl: null
+                photoUrl: null,
             }))
             
         })
@@ -56,7 +74,9 @@ export default function SignUpModal() {
                 rounded-lg flex justify-center
                 ">
                     <div className="w-[90%] mt-8 flex flex-col">
-                        <button className="bg-white text-black w-full font-bold text-lg p-2 rounded-md mt-8">
+                        <button className="bg-white text-black w-full font-bold text-lg p-2 rounded-md mt-8"
+                        onClick={handleGuestSignIn}
+                        >
                             Sign in as Guest
                         </button>
                         <h1 className="text-center mt-4 font-bold text-lg">or</h1>
@@ -65,6 +85,7 @@ export default function SignUpModal() {
                         placeholder="Full Name"
                         className="h-10 mt-8 rounded-md bg-transparent border border-gray-700 p-6"
                         type={"text"} 
+                        onChange={event => setName(event.target.value)}
                         />
                         <input 
                         placeholder="Email"

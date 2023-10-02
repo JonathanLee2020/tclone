@@ -21,7 +21,6 @@ export default function BottomBaner() {
                 >Sign Up</button> */}
 
                 <LoginModal/>
-                gaming
                 <SignUpModal/>
             </div>
         </div>
