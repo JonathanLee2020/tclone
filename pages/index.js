@@ -30,7 +30,8 @@ export default function Home() {
 
 
       </div>
-      <CommentModal></CommentModal>
+      <CommentModal />
+
       {!username && <BottomBaner/>}
     </div>
     
