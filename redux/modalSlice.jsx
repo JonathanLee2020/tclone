@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     loginModalOpen: false,
-    signupModalOpen: false
+    signupModalOpen: false,
+    commentModalOpen: false
 
 }
 
@@ -16,15 +17,23 @@ const modalSlice = createSlice({
     closeSignupModal: (state) => {
         state.signupModalOpen = false
     },
+
     openLoginModal: (state) => {
         state.loginModalOpen = true
     }, 
     closeLoginModal: (state) => {
         state.loginModalOpen = false
+    },
+
+    openCommentModal: (state) => {
+        state.commentModalOpen = true
+    }, 
+    closeCommentModal: (state) => {
+        state.commentModalOpen = false
     }
   }
 });
 
-export const {openSignupModal, closeSignupModal, openLoginModal, closeLoginModal} = modalSlice.actions
+export const {openSignupModal, closeSignupModal, openLoginModal, closeLoginModal, openCommentModal, closeCommentModal} = modalSlice.actions
 
 export default modalSlice.reducer
