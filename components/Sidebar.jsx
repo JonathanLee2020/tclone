@@ -15,6 +15,7 @@ import {
 import { signOut } from "firebase/auth";
 
 import Image from 'next/image';
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 
 
@@ -41,10 +42,12 @@ export default function Sidebar () {
                 <div className="flex justify-center xl:justify-start items-center py-3 xl:p-3">
                     <Image src={"/assets/twitter-logo.png"} width={34} height={34} alt="hello"/>
                 </div>
+                <Link href={"/"}>
                 <SideBarLink 
                 text={"Home"}
                 Icon={HomeIcon}
                 ></SideBarLink>
+                </Link>
 
                 <SideBarLink 
                 text={"Explore"}
