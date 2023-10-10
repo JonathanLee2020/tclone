@@ -35,31 +35,31 @@ export default function Trending () {
                     />
                     <p className="text-xs text-gray-500">Trending in Australia</p>
                     <h1 className="text-[15px] font-bond">Horn of Salvation Ichigo</h1>
-                    <p className="text-xs text-gray-500">780K Tweets</p>
+                    <p className="text-xs text-gray-500">670K Tweets</p>
                 </div>
                 <div className="p-3 relative">
                     <DotsHorizontalIcon
                     className="w-5 text-gray-600 absolute right-4"
                     />
                     <p className="text-xs text-gray-500">Trending in Australia</p>
-                    <h1 className="text-[15px] font-bond">Ki</h1>
-                    <p className="text-xs text-gray-500">780K Tweets</p>
+                    <h1 className="text-[15px] font-bond">Iki Island</h1>
+                    <p className="text-xs text-gray-500">540K Tweets</p>
                 </div>
                 <div className="p-3 relative">
                     <DotsHorizontalIcon
                     className="w-5 text-gray-600 absolute right-4"
                     />
                     <p className="text-xs text-gray-500">Trending in Australia</p>
-                    <h1 className="text-[15px] font-bond">Ghost</h1>
-                    <p className="text-xs text-gray-500">780K Tweets</p>
+                    <h1 className="text-[15px] font-bond">Six Path Sage Mode</h1>
+                    <p className="text-xs text-gray-500">490K Tweets</p>
                 </div>
                 <div className="p-3 relative">
                     <DotsHorizontalIcon
                     className="w-5 text-gray-600 absolute right-4"
                     />
                     <p className="text-xs text-gray-500">Trending in Australia</p>
-                    <h1 className="text-[15px] font-bond">Ghost</h1>
-                    <p className="text-xs text-gray-500">780K Tweets</p>
+                    <h1 className="text-[15px] font-bond">#ONEPIECE1094</h1>
+                    <p className="text-xs text-gray-500">460K Tweets</p>
                 </div>
             </div>
             <div className="w-[300px] h-[500px] bg-white bg-opacity-10 rounded-3xl mt-3">
@@ -89,14 +89,14 @@ export default function Trending () {
                     <div className="flex space-x-3">
                         <img 
                         className="w-11 h-11 object-cover rounded-full"
-                        src="/assets/kiki.jpeg" alt="" 
+                        src="/assets/profilePictures/pfp3.png" alt="" 
                         />
                         <div>
                             <div className="flex space-x-1">
-                                <h1 className="font-bold">Kiki</h1>
+                                <h1 className="font-bold">Dawn</h1>
                                 <BadgeCheckIcon className="w-[18px] text-blue-400"/>
                             </div>
-                         <h1 className="text-[12px] mt-1 text-gray-500">@DeliveryService</h1>
+                         <h1 className="text-[12px] mt-1 text-gray-500">@SandgemScouting</h1>
                         </div>
                         
                     </div>
@@ -109,14 +109,14 @@ export default function Trending () {
                     <div className="flex space-x-3">
                         <img 
                         className="w-11 h-11 object-cover rounded-full"
-                        src="/assets/kiki.jpeg" alt="" 
+                        src="/assets/profilePictures/pfp8.png" alt="" 
                         />
                         <div>
                             <div className="flex space-x-1">
-                                <h1 className="font-bold">Kiki</h1>
+                                <h1 className="font-bold">Zangetsu</h1>
                                 <BadgeCheckIcon className="w-[18px] text-blue-400"/>
                             </div>
-                         <h1 className="text-[12px] mt-1 text-gray-500">@DeliveryService</h1>
+                         <h1 className="text-[12px] mt-1 text-gray-500">@YoungYhwach</h1>
                         </div>
                         
                     </div>
